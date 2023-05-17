@@ -1,0 +1,30 @@
+imageCredentials:
+  registry: docker.com
+# Default values for jmeterHelm.
+# This is a YAML-formatted file.
+# Declare variables to be passed into your templates.
+
+images:
+  master:
+    repo: vikum1407/jmeter-master
+    tag: prometheus
+    pullPolicy: Always
+  slave:
+    repo: vikum1407/jmeter-slave
+    tag: prometheus
+    pullPolicy: Always
+
+annotations: {}
+
+config:
+  disableSSL: true
+  master:
+    #testsConfigMap: jmeter-test
+    replicaCount: 1
+    restartPolicy: Always
+    oneShotTest: false
+  slaves:
+    replicaCount: 2
+    restartPolicy: Always
+
+labels: {}

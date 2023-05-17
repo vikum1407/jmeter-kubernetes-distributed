@@ -1,0 +1,630 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jmeterTestPlan version="1.2" properties="5.0" jmeter="5.4.1">
+  <hashTree>
+    <TestPlan guiclass="TestPlanGui" testclass="TestPlan" testname="EGW-Axonect-2.1.0-All" enabled="true">
+      <stringProp name="TestPlan.comments"></stringProp>
+      <boolProp name="TestPlan.functional_mode">false</boolProp>
+      <boolProp name="TestPlan.serialize_threadgroups">false</boolProp>
+      <elementProp name="TestPlan.user_defined_variables" elementType="Arguments" guiclass="ArgumentsPanel" testclass="Arguments" testname="User Defined Variables" enabled="true">
+        <collectionProp name="Arguments.arguments"/>
+      </elementProp>
+      <stringProp name="TestPlan.user_define_classpath"></stringProp>
+    </TestPlan>
+    <hashTree>
+      <ThreadGroup guiclass="ThreadGroupGui" testclass="ThreadGroup" testname="EGW" enabled="true">
+        <stringProp name="ThreadGroup.on_sample_error">continue</stringProp>
+        <elementProp name="ThreadGroup.main_controller" elementType="LoopController" guiclass="LoopControlPanel" testclass="LoopController" testname="Loop Controller" enabled="true">
+          <boolProp name="LoopController.continue_forever">false</boolProp>
+          <intProp name="LoopController.loops">-1</intProp>
+        </elementProp>
+        <stringProp name="ThreadGroup.num_threads">5</stringProp>
+        <stringProp name="ThreadGroup.ramp_time">1</stringProp>
+        <longProp name="ThreadGroup.start_time">1535967710000</longProp>
+        <longProp name="ThreadGroup.end_time">1535967710000</longProp>
+        <boolProp name="ThreadGroup.scheduler">true</boolProp>
+        <stringProp name="ThreadGroup.duration">1800</stringProp>
+        <stringProp name="ThreadGroup.delay"></stringProp>
+        <stringProp name="TestPlan.comments">
+</stringProp>
+        <boolProp name="ThreadGroup.same_user_on_next_iteration">true</boolProp>
+      </ThreadGroup>
+      <hashTree>
+        <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="Custom" enabled="true">
+          <boolProp name="HTTPSampler.postBodyRaw">true</boolProp>
+          <elementProp name="HTTPsampler.Arguments" elementType="Arguments">
+            <collectionProp name="Arguments.arguments">
+              <elementProp name="" elementType="HTTPArgument">
+                <boolProp name="HTTPArgument.always_encode">false</boolProp>
+                <stringProp name="Argument.value">{&#xd;
+    &quot;outputSDResp&quot;: {&#xd;
+        &quot;enduserid&quot;:&quot;${msisdn}&quot;,&#xd;
+    	   &quot;clientCorrelator&quot;:&quot;${clientCorrelator}&quot;,&#xd;
+        &quot;crmServiceID&quot;: &quot;1-20RW-144&quot;,&#xd;
+        &quot;imsi&quot;: 502191347348042,&#xd;
+        &quot;icicID&quot;: 896019180627105470,&#xd;
+        &quot;ivrLanguage&quot;: null,&#xd;
+        &quot;serviceType&quot;: &quot;CNVRGTPrepaid&quot;,&#xd;
+        &quot;product&quot;: &quot;Xpax RM10&quot;,&#xd;
+        &quot;crmCustomerID&quot;: &quot;1-20P2-184&quot;,&#xd;
+        &quot;customerName&quot;: &quot;1-1Z5KL977&quot;,&#xd;
+        &quot;accountCategory&quot;: &quot;NULL-Consumer&quot;,&#xd;
+        &quot;dateOfBirth&quot;: &quot;1950-01-01T00:00:00.000+07:30&quot;,&#xd;
+        &quot;nationality&quot;: null,&#xd;
+        &quot;race&quot;: null,&#xd;
+        &quot;gender&quot;: null,&#xd;
+        &quot;customerIDNo&quot;: 500101123566,&#xd;
+        &quot;customerIDType&quot;: &quot;New NRIC&quot;,&#xd;
+        &quot;vipCode&quot;: null,&#xd;
+        &quot;segmentGroup&quot;: &quot;Consumer&quot;,&#xd;
+        &quot;segmentCode&quot;: null,&#xd;
+        &quot;segmentSubGroup&quot;: &quot;Retail&quot;,&#xd;
+        &quot;buildingName&quot;: null,&#xd;
+        &quot;floorNumber&quot;: null,&#xd;
+        &quot;streetType&quot;: null,&#xd;
+        &quot;streetAddress&quot;: 121,&#xd;
+        &quot;houseUnitLotNumber&quot;: null,&#xd;
+        &quot;postcode&quot;: 50001,&#xd;
+        &quot;poBox&quot;: null,&#xd;
+        &quot;state&quot;: &quot;WP&quot;,&#xd;
+        &quot;city&quot;: &quot;KUALA LUMPUR&quot;,&#xd;
+        &quot;addressType&quot;: null,&#xd;
+        &quot;bestCallTime&quot;: null,&#xd;
+        &quot;tPIN&quot;: null,&#xd;
+        &quot;ivrHotlineExclusion&quot;: null,&#xd;
+        &quot;ivrVIPHotlineExclusion&quot;: null,&#xd;
+        &quot;callerNumber&quot;: &quot;0194016983&quot;,&#xd;
+        &quot;assetStatus&quot;: &quot;Active&quot;,&#xd;
+        &quot;assetSubStatus&quot;: &quot;Active&quot;,&#xd;
+        &quot;firstCallActivationDate&quot;: &quot;2018-12-05T00:00:00.000+08:00&quot;,&#xd;
+        &quot;starterPackBrand&quot;: null,&#xd;
+        &quot;starterPackName&quot;: null,&#xd;
+        &quot;plan&quot;: &quot;Xpax Plan&quot;,&#xd;
+        &quot;registrationDate&quot;: null,&#xd;
+        &quot;ccToken&quot;: &quot;N&quot;,&#xd;
+        &quot;eliteIndicator&quot;: &quot;N&quot;,&#xd;
+        &quot;serviceBundleClass&quot;: &quot;Mobile Service ICC&quot;,&#xd;
+        &quot;creditLimit&quot;: &quot;RM.00&quot;,&#xd;
+        &quot;errorCode&quot;: &quot;OK&quot;,&#xd;
+        &quot;errorMessage&quot;: null,&#xd;
+        &quot;firstCallActivationDate&quot;: &quot;2018-12-05T00:00:00.000+08:00&quot;,&#xd;
+        &quot;starterPackBrand&quot;: null,&#xd;
+        &quot;starterPackName&quot;: null,&#xd;
+        &quot;plan&quot;: &quot;Xpax Plan&quot;,&#xd;
+        &quot;registrationDate&quot;: null,&#xd;
+        &quot;ccToken&quot;: &quot;N&quot;,&#xd;
+        &quot;eliteIndicator&quot;: &quot;N&quot;,&#xd;
+        &quot;serviceBundleClass&quot;: &quot;Mobile Service ICC&quot;,&#xd;
+        &quot;creditLimit&quot;: &quot;RM.00&quot;,&#xd;
+        &quot;errorCode&quot;: &quot;OK&quot;,&#xd;
+        &quot;errorMessage&quot;: null,&#xd;
+        &quot;tPIN&quot;: null,&#xd;
+        &quot;ivrHotlineExclusion&quot;: null,&#xd;
+        &quot;ivrVIPHotlineExclusion&quot;: null,&#xd;
+        &quot;callerNumber&quot;: &quot;0194016983&quot;,&#xd;
+        &quot;assetStatus&quot;: &quot;Active&quot;,&#xd;
+        &quot;assetSubStatus&quot;: &quot;Active&quot;,&#xd;
+        &quot;firstCallActivationDate&quot;: &quot;2018-12-05T00:00:00.000+08:00&quot;,&#xd;
+        &quot;starterPackBrand&quot;: null,&#xd;
+        &quot;starterPackName&quot;: null,&#xd;
+        &quot;plan&quot;: &quot;Xpax Plan&quot;,&#xd;
+        &quot;registrationDate&quot;: null,&#xd;
+        &quot;ccToken&quot;: &quot;N&quot;,&#xd;
+        &quot;eliteIndicator&quot;: &quot;N&quot;,&#xd;
+        &quot;serviceBundleClass&quot;: &quot;Mobile Service ICC&quot;,&#xd;
+        &quot;creditLimit&quot;: &quot;RM.00&quot;,&#xd;
+        &quot;errorCode&quot;: &quot;OK&quot;,&#xd;
+        &quot;errorMessage&quot;: null,&#xd;
+        &quot;firstCallActivationDate&quot;: &quot;2018-12-05T00:00:00.000+08:00&quot;,&#xd;
+        &quot;starterPackBrand&quot;: null,&#xd;
+        &quot;starterPackName&quot;: null,&#xd;
+        &quot;plan&quot;: &quot;Xpax Plan&quot;,&#xd;
+        &quot;registrationDate&quot;: null,&#xd;
+        &quot;ccToken&quot;: &quot;N&quot;,&#xd;
+        &quot;eliteIndicator&quot;: &quot;N&quot;,&#xd;
+        &quot;serviceBundleClass&quot;: &quot;Mobile Service ICC&quot;,&#xd;
+        &quot;creditLimit&quot;: &quot;RM.00&quot;,&#xd;
+        &quot;errorCode&quot;: &quot;OK&quot;,&#xd;
+        &quot;errorMessage&quot;: null,&#xd;
+        &quot;tPIN&quot;: null,&#xd;
+        &quot;ivrHotlineExclusion&quot;: null,&#xd;
+        &quot;ivrVIPHotlineExclusion&quot;: null,&#xd;
+        &quot;callerNumber&quot;: &quot;0194016983&quot;,&#xd;
+        &quot;assetStatus&quot;: &quot;Active&quot;,&#xd;
+        &quot;assetSubStatus&quot;: &quot;Active&quot;,&#xd;
+        &quot;firstCallActivationDate&quot;: &quot;2018-12-05T00:00:00.000+08:00&quot;,&#xd;
+        &quot;starterPackBrand&quot;: null,&#xd;
+        &quot;starterPackName&quot;: null,&#xd;
+        &quot;plan&quot;: &quot;Xpax Plan&quot;,&#xd;
+        &quot;registrationDate&quot;: null,&#xd;
+        &quot;ccToken&quot;: &quot;N&quot;,&#xd;
+        &quot;eliteIndicator&quot;: &quot;N&quot;,&#xd;
+        &quot;serviceBundleClass&quot;: &quot;Mobile Service ICC&quot;,&#xd;
+        &quot;creditLimit&quot;: &quot;RM.00&quot;,&#xd;
+        &quot;errorCode&quot;: &quot;OK&quot;,&#xd;
+        &quot;errorMessage&quot;: null,&#xd;
+        &quot;firstCallActivationDate&quot;: &quot;2018-12-05T00:00:00.000+08:00&quot;,&#xd;
+        &quot;starterPackBrand&quot;: null,&#xd;
+        &quot;starterPackName&quot;: null,&#xd;
+        &quot;plan&quot;: &quot;Xpax Plan&quot;,&#xd;
+        &quot;registrationDate&quot;: null,&#xd;
+        &quot;ccToken&quot;: &quot;N&quot;,&#xd;
+        &quot;eliteIndicator&quot;: &quot;N&quot;,&#xd;
+        &quot;serviceBundleClass&quot;: &quot;Mobile Service ICC&quot;,&#xd;
+        &quot;creditLimit&quot;: &quot;RM.00&quot;,&#xd;
+        &quot;errorCode&quot;: &quot;OK&quot;,&#xd;
+        &quot;errorMessage&quot;: null,&#xd;
+        &quot;tPIN&quot;: null,&#xd;
+        &quot;ivrHotlineExclusion&quot;: null,&#xd;
+        &quot;ivrVIPHotlineExclusion&quot;: null,&#xd;
+        &quot;callerNumber&quot;: &quot;0194016983&quot;,&#xd;
+        &quot;assetStatus&quot;: &quot;Active&quot;,&#xd;
+        &quot;assetSubStatus&quot;: &quot;Active&quot;,&#xd;
+        &quot;firstCallActivationDate&quot;: &quot;2018-12-05T00:00:00.000+08:00&quot;,&#xd;
+        &quot;starterPackBrand&quot;: null,&#xd;
+        &quot;starterPackName&quot;: null,&#xd;
+        &quot;plan&quot;: &quot;Xpax Plan&quot;,&#xd;
+        &quot;registrationDate&quot;: null,&#xd;
+        &quot;ccToken&quot;: &quot;N&quot;,&#xd;
+        &quot;eliteIndicator&quot;: &quot;N&quot;,&#xd;
+        &quot;serviceBundleClass&quot;: &quot;Mobile Service ICC&quot;,&#xd;
+        &quot;creditLimit&quot;: &quot;RM.00&quot;,&#xd;
+        &quot;errorCode&quot;: &quot;OK&quot;,&#xd;
+        &quot;errorMessage&quot;: null,&#xd;
+        &quot;firstCallActivationDate&quot;: &quot;2018-12-05T00:00:00.000+08:00&quot;,&#xd;
+        &quot;starterPackBrand&quot;: null,&#xd;
+        &quot;starterPackName&quot;: null,&#xd;
+        &quot;plan&quot;: &quot;Xpax Plan&quot;,&#xd;
+        &quot;registrationDate&quot;: null,&#xd;
+        &quot;ccToken&quot;: &quot;N&quot;,&#xd;
+        &quot;eliteIndicator&quot;: &quot;N&quot;,&#xd;
+        &quot;serviceBundleClass&quot;: &quot;Mobile Service ICC&quot;,&#xd;
+        &quot;creditLimit&quot;: &quot;RM.00&quot;,&#xd;
+        &quot;errorCode&quot;: &quot;OK&quot;,&#xd;
+        &quot;errorMessage&quot;: null&#xd;
+    }&#xd;
+}</stringProp>
+                <stringProp name="Argument.metadata">=</stringProp>
+              </elementProp>
+            </collectionProp>
+          </elementProp>
+          <stringProp name="HTTPSampler.domain">gateway.am.axp.com</stringProp>
+          <stringProp name="HTTPSampler.port"></stringProp>
+          <stringProp name="HTTPSampler.protocol">https</stringProp>
+          <stringProp name="HTTPSampler.contentEncoding"></stringProp>
+          <stringProp name="HTTPSampler.path">/homeland/v1</stringProp>
+          <stringProp name="HTTPSampler.method">POST</stringProp>
+          <boolProp name="HTTPSampler.follow_redirects">true</boolProp>
+          <boolProp name="HTTPSampler.auto_redirects">false</boolProp>
+          <boolProp name="HTTPSampler.use_keepalive">true</boolProp>
+          <boolProp name="HTTPSampler.DO_MULTIPART_POST">false</boolProp>
+          <stringProp name="HTTPSampler.embedded_url_re"></stringProp>
+          <stringProp name="HTTPSampler.connect_timeout">10000</stringProp>
+          <stringProp name="HTTPSampler.response_timeout">60000</stringProp>
+        </HTTPSamplerProxy>
+        <hashTree>
+          <HeaderManager guiclass="HeaderPanel" testclass="HeaderManager" testname="Headers" enabled="true">
+            <collectionProp name="HeaderManager.headers">
+              <elementProp name="" elementType="Header">
+                <stringProp name="Header.name">Authorization</stringProp>
+                <stringProp name="Header.value">Bearer eyJ4NXQiOiJPVFE1WmpFelpqWTBNV0ZrWlRFek9XRXpaVEV4TW1ReVlUZGlOREl5WVRkall6WTJZakF3TlEiLCJraWQiOiJNRFZrWTJJMVl6RmtNamRqWVRrellqaGtORFE1T1Roa1ltWmlZamxrWWpSbU1tTXhZMkpqWW1RNE1qWTJNV1UwWWpFMk16TTFaVEV3TkRrM1pqVTVaUV9SUzI1NiIsImFsZyI6IlJTMjU2In0.eyJzdWIiOiJhZG1pbiIsImF1dCI6IkFQUExJQ0FUSU9OIiwiYXVkIjoiMkdMMGdDQ1FuMlJsTGlQaWc3cHZMNURCRXZzYSIsIm5iZiI6MTY4NDE2ODk5MSwiYXpwIjoiMkdMMGdDQ1FuMlJsTGlQaWc3cHZMNURCRXZzYSIsInNjb3BlIjoiYW1fYXBwbGljYXRpb25fc2NvcGUgZGVmYXVsdCIsImlzcyI6Imh0dHBzOlwvXC9rbS5heHAuY29tOjQ0M1wvb2F1dGgyXC90b2tlbiIsImV4cCI6MTAwMTY4NDE2ODk5MCwiaWF0IjoxNjg0MTY4OTkxLCJqdGkiOiI2YmQzMTc5Yy05ZTFhLTRhYjQtYTVlMy01ZDFlMDg3NGJhNjYifQ.Pyb98LsBT18c5bkObMOMCjdH2H5g9mlwfputr2FF4M7Os5r9eqIzDbZPr96uBXHaVGgZ07IxIjgB7sOfaD9iztGSXrk96hnKotzbesZA9BoByYt-9oHaAfwkhIdO1q5GiIxAJCFm1oh4T4wiw92jXCuz6F9CHQJuHDWSwcLNAar2obZBy6bueVjkfHMJpurtUBTBN-NAQ7Bbp7doEJ7cwfvcW24D0ZoSXI8A7taK16W8CvLp2jluwhz4K4qgJWODx8KkkLuN6Jeafqk9QlvpwkKGoV6uJSkiw6EQR7KGuslCk7EvCZIRYT4N-6BD6JL4X0RSuhVjjPXb_cNQUGnJwQ</stringProp>
+              </elementProp>
+              <elementProp name="" elementType="Header">
+                <stringProp name="Header.name">Content-Type</stringProp>
+                <stringProp name="Header.value">application/json</stringProp>
+              </elementProp>
+              <elementProp name="" elementType="Header">
+                <stringProp name="Header.name">Postman-Token</stringProp>
+                <stringProp name="Header.value">2576965d-04b2-4797-b19e-d2cacf6f8fb2</stringProp>
+              </elementProp>
+              <elementProp name="" elementType="Header">
+                <stringProp name="Header.name">Cache-Control</stringProp>
+                <stringProp name="Header.value">no-cache</stringProp>
+              </elementProp>
+            </collectionProp>
+          </HeaderManager>
+          <hashTree/>
+          <RandomVariableConfig guiclass="TestBeanGUI" testclass="RandomVariableConfig" testname="MSISDNs Generator" enabled="true">
+            <stringProp name="maximumValue">9473999999</stringProp>
+            <stringProp name="minimumValue">9470000000</stringProp>
+            <stringProp name="outputFormat"></stringProp>
+            <boolProp name="perThread">false</boolProp>
+            <stringProp name="randomSeed"></stringProp>
+            <stringProp name="variableName">msisdn</stringProp>
+          </RandomVariableConfig>
+          <hashTree/>
+          <RandomVariableConfig guiclass="TestBeanGUI" testclass="RandomVariableConfig" testname="ClientCorrelator" enabled="true">
+            <stringProp name="maximumValue">9999999999</stringProp>
+            <stringProp name="minimumValue">1</stringProp>
+            <stringProp name="outputFormat"></stringProp>
+            <boolProp name="perThread">false</boolProp>
+            <stringProp name="randomSeed"></stringProp>
+            <stringProp name="variableName">clientCorrelator</stringProp>
+          </RandomVariableConfig>
+          <hashTree/>
+        </hashTree>
+        <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="Payment" enabled="true">
+          <boolProp name="HTTPSampler.postBodyRaw">true</boolProp>
+          <elementProp name="HTTPsampler.Arguments" elementType="Arguments">
+            <collectionProp name="Arguments.arguments">
+              <elementProp name="" elementType="HTTPArgument">
+                <boolProp name="HTTPArgument.always_encode">false</boolProp>
+                <stringProp name="Argument.value">{&quot;amountTransaction&quot;: {&#xd;
+    &quot;endUserId&quot;: &quot;tel:+${msisdn}&quot;,&#xd;
+    &quot;paymentAmount&quot;: {&#xd;
+        &quot;chargingInformation&quot;: {&#xd;
+            &quot;amount&quot;: &quot;20&quot;,&#xd;
+            &quot;currency&quot;: &quot;LKR&quot;,&#xd;
+            &quot;description&quot;: &quot;Alien Invaders Game&quot;&#xd;
+        },&#xd;
+        &quot;chargingMetaData&quot; : {&#xd;
+          &quot;onBehalfOf&quot; : &quot;Example Games Inc&quot;,&#xd;
+            &quot;purchaseCategoryCode&quot; : &quot;&quot;,&#xd;
+            &quot;channel&quot; : &quot;WAP&quot;,&#xd;
+            &quot;taxAmount&quot; : &quot;0&quot;&#xd;
+        }&#xd;
+    },&#xd;
+    &quot;referenceCode&quot;: &quot;REF-123458&quot;,&#xd;
+    &quot;transactionOperationStatus&quot;: &quot;Charged&quot;&#xd;
+}&#xd;
+}</stringProp>
+                <stringProp name="Argument.metadata">=</stringProp>
+              </elementProp>
+            </collectionProp>
+          </elementProp>
+          <stringProp name="HTTPSampler.domain">gateway.am.axp.com</stringProp>
+          <stringProp name="HTTPSampler.port"></stringProp>
+          <stringProp name="HTTPSampler.protocol">https</stringProp>
+          <stringProp name="HTTPSampler.contentEncoding"></stringProp>
+          <stringProp name="HTTPSampler.path">/payment/v1/tel:${msisdn}/transactions/amount</stringProp>
+          <stringProp name="HTTPSampler.method">POST</stringProp>
+          <boolProp name="HTTPSampler.follow_redirects">true</boolProp>
+          <boolProp name="HTTPSampler.auto_redirects">false</boolProp>
+          <boolProp name="HTTPSampler.use_keepalive">true</boolProp>
+          <boolProp name="HTTPSampler.DO_MULTIPART_POST">false</boolProp>
+          <stringProp name="HTTPSampler.embedded_url_re"></stringProp>
+          <stringProp name="HTTPSampler.connect_timeout">10000</stringProp>
+          <stringProp name="HTTPSampler.response_timeout">60000</stringProp>
+        </HTTPSamplerProxy>
+        <hashTree>
+          <HeaderManager guiclass="HeaderPanel" testclass="HeaderManager" testname="Headers" enabled="true">
+            <collectionProp name="HeaderManager.headers">
+              <elementProp name="" elementType="Header">
+                <stringProp name="Header.name">Authorization</stringProp>
+                <stringProp name="Header.value">Bearer eyJ4NXQiOiJPVFE1WmpFelpqWTBNV0ZrWlRFek9XRXpaVEV4TW1ReVlUZGlOREl5WVRkall6WTJZakF3TlEiLCJraWQiOiJNRFZrWTJJMVl6RmtNamRqWVRrellqaGtORFE1T1Roa1ltWmlZamxrWWpSbU1tTXhZMkpqWW1RNE1qWTJNV1UwWWpFMk16TTFaVEV3TkRrM1pqVTVaUV9SUzI1NiIsImFsZyI6IlJTMjU2In0.eyJzdWIiOiJhZG1pbiIsImF1dCI6IkFQUExJQ0FUSU9OIiwiYXVkIjoiMkdMMGdDQ1FuMlJsTGlQaWc3cHZMNURCRXZzYSIsIm5iZiI6MTY4NDE2ODk5MSwiYXpwIjoiMkdMMGdDQ1FuMlJsTGlQaWc3cHZMNURCRXZzYSIsInNjb3BlIjoiYW1fYXBwbGljYXRpb25fc2NvcGUgZGVmYXVsdCIsImlzcyI6Imh0dHBzOlwvXC9rbS5heHAuY29tOjQ0M1wvb2F1dGgyXC90b2tlbiIsImV4cCI6MTAwMTY4NDE2ODk5MCwiaWF0IjoxNjg0MTY4OTkxLCJqdGkiOiI2YmQzMTc5Yy05ZTFhLTRhYjQtYTVlMy01ZDFlMDg3NGJhNjYifQ.Pyb98LsBT18c5bkObMOMCjdH2H5g9mlwfputr2FF4M7Os5r9eqIzDbZPr96uBXHaVGgZ07IxIjgB7sOfaD9iztGSXrk96hnKotzbesZA9BoByYt-9oHaAfwkhIdO1q5GiIxAJCFm1oh4T4wiw92jXCuz6F9CHQJuHDWSwcLNAar2obZBy6bueVjkfHMJpurtUBTBN-NAQ7Bbp7doEJ7cwfvcW24D0ZoSXI8A7taK16W8CvLp2jluwhz4K4qgJWODx8KkkLuN6Jeafqk9QlvpwkKGoV6uJSkiw6EQR7KGuslCk7EvCZIRYT4N-6BD6JL4X0RSuhVjjPXb_cNQUGnJwQ</stringProp>
+              </elementProp>
+              <elementProp name="" elementType="Header">
+                <stringProp name="Header.name">Content-Type</stringProp>
+                <stringProp name="Header.value">application/json</stringProp>
+              </elementProp>
+              <elementProp name="" elementType="Header">
+                <stringProp name="Header.name">Postman-Token</stringProp>
+                <stringProp name="Header.value">2576965d-04b2-4797-b19e-d2cacf6f8fb2</stringProp>
+              </elementProp>
+              <elementProp name="" elementType="Header">
+                <stringProp name="Header.name">Cache-Control</stringProp>
+                <stringProp name="Header.value">no-cache</stringProp>
+              </elementProp>
+            </collectionProp>
+          </HeaderManager>
+          <hashTree/>
+          <RandomVariableConfig guiclass="TestBeanGUI" testclass="RandomVariableConfig" testname="MSISDNs Generator" enabled="true">
+            <stringProp name="maximumValue">9473999999</stringProp>
+            <stringProp name="minimumValue">9470000000</stringProp>
+            <stringProp name="outputFormat"></stringProp>
+            <boolProp name="perThread">false</boolProp>
+            <stringProp name="randomSeed"></stringProp>
+            <stringProp name="variableName">msisdn</stringProp>
+          </RandomVariableConfig>
+          <hashTree/>
+          <RandomVariableConfig guiclass="TestBeanGUI" testclass="RandomVariableConfig" testname="ClientCorrelator" enabled="true">
+            <stringProp name="maximumValue">9999999999</stringProp>
+            <stringProp name="minimumValue">1</stringProp>
+            <stringProp name="outputFormat"></stringProp>
+            <boolProp name="perThread">false</boolProp>
+            <stringProp name="randomSeed"></stringProp>
+            <stringProp name="variableName">clientCorrelator</stringProp>
+          </RandomVariableConfig>
+          <hashTree/>
+        </hashTree>
+        <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="SMS" enabled="true">
+          <boolProp name="HTTPSampler.postBodyRaw">true</boolProp>
+          <elementProp name="HTTPsampler.Arguments" elementType="Arguments">
+            <collectionProp name="Arguments.arguments">
+              <elementProp name="" elementType="HTTPArgument">
+                <boolProp name="HTTPArgument.always_encode">false</boolProp>
+                <stringProp name="Argument.value">{&#xd;
+   &quot;outboundSMSMessageRequest&quot;:{&#xd;
+	&quot;senderAddress&quot;:&quot;${shortcode}&quot;,&#xd;
+      &quot;senderName&quot;:&quot;BOB&quot;,&#xd;
+     &quot;address&quot;:[&#xd;
+         &quot;tel:${msisdn}&quot;&#xd;
+      ],&#xd;
+      &quot;receiptRequest&quot;:{&#xd;
+         &quot;callbackData&quot;:&quot;some-data-useful-to-the-requester&quot;,&#xd;
+         &quot;notifyURL&quot;:&quot;http://34.73.210.238:9090/mocktest/notifyUrl/service&quot;&#xd;
+      },&#xd;
+      &quot;outboundSMSTextMessage&quot;:{&#xd;
+         &quot;message&quot;:&quot;Test1 \&quot; test&quot;&#xd;
+      },&#xd;
+      &quot;clientCorrelator&quot;:&quot;${clientCorrelator}&quot;&#xd;
+   }&#xd;
+}</stringProp>
+                <stringProp name="Argument.metadata">=</stringProp>
+              </elementProp>
+            </collectionProp>
+          </elementProp>
+          <stringProp name="HTTPSampler.domain">gateway.am.axp.com</stringProp>
+          <stringProp name="HTTPSampler.port"></stringProp>
+          <stringProp name="HTTPSampler.protocol">https</stringProp>
+          <stringProp name="HTTPSampler.contentEncoding"></stringProp>
+          <stringProp name="HTTPSampler.path">/smsmessaging/v1/outbound/${shortcode}/requests</stringProp>
+          <stringProp name="HTTPSampler.method">POST</stringProp>
+          <boolProp name="HTTPSampler.follow_redirects">true</boolProp>
+          <boolProp name="HTTPSampler.auto_redirects">false</boolProp>
+          <boolProp name="HTTPSampler.use_keepalive">true</boolProp>
+          <boolProp name="HTTPSampler.DO_MULTIPART_POST">false</boolProp>
+          <stringProp name="HTTPSampler.embedded_url_re"></stringProp>
+          <stringProp name="HTTPSampler.connect_timeout">10000</stringProp>
+          <stringProp name="HTTPSampler.response_timeout">60000</stringProp>
+        </HTTPSamplerProxy>
+        <hashTree>
+          <HeaderManager guiclass="HeaderPanel" testclass="HeaderManager" testname="Headers" enabled="true">
+            <collectionProp name="HeaderManager.headers">
+              <elementProp name="" elementType="Header">
+                <stringProp name="Header.name">Authorization</stringProp>
+                <stringProp name="Header.value">Bearer eyJ4NXQiOiJPVFE1WmpFelpqWTBNV0ZrWlRFek9XRXpaVEV4TW1ReVlUZGlOREl5WVRkall6WTJZakF3TlEiLCJraWQiOiJNRFZrWTJJMVl6RmtNamRqWVRrellqaGtORFE1T1Roa1ltWmlZamxrWWpSbU1tTXhZMkpqWW1RNE1qWTJNV1UwWWpFMk16TTFaVEV3TkRrM1pqVTVaUV9SUzI1NiIsImFsZyI6IlJTMjU2In0.eyJzdWIiOiJhZG1pbiIsImF1dCI6IkFQUExJQ0FUSU9OIiwiYXVkIjoiMkdMMGdDQ1FuMlJsTGlQaWc3cHZMNURCRXZzYSIsIm5iZiI6MTY4NDE2ODk5MSwiYXpwIjoiMkdMMGdDQ1FuMlJsTGlQaWc3cHZMNURCRXZzYSIsInNjb3BlIjoiYW1fYXBwbGljYXRpb25fc2NvcGUgZGVmYXVsdCIsImlzcyI6Imh0dHBzOlwvXC9rbS5heHAuY29tOjQ0M1wvb2F1dGgyXC90b2tlbiIsImV4cCI6MTAwMTY4NDE2ODk5MCwiaWF0IjoxNjg0MTY4OTkxLCJqdGkiOiI2YmQzMTc5Yy05ZTFhLTRhYjQtYTVlMy01ZDFlMDg3NGJhNjYifQ.Pyb98LsBT18c5bkObMOMCjdH2H5g9mlwfputr2FF4M7Os5r9eqIzDbZPr96uBXHaVGgZ07IxIjgB7sOfaD9iztGSXrk96hnKotzbesZA9BoByYt-9oHaAfwkhIdO1q5GiIxAJCFm1oh4T4wiw92jXCuz6F9CHQJuHDWSwcLNAar2obZBy6bueVjkfHMJpurtUBTBN-NAQ7Bbp7doEJ7cwfvcW24D0ZoSXI8A7taK16W8CvLp2jluwhz4K4qgJWODx8KkkLuN6Jeafqk9QlvpwkKGoV6uJSkiw6EQR7KGuslCk7EvCZIRYT4N-6BD6JL4X0RSuhVjjPXb_cNQUGnJwQ</stringProp>
+              </elementProp>
+              <elementProp name="" elementType="Header">
+                <stringProp name="Header.name">Content-Type</stringProp>
+                <stringProp name="Header.value">application/json</stringProp>
+              </elementProp>
+              <elementProp name="" elementType="Header">
+                <stringProp name="Header.name">Postman-Token</stringProp>
+                <stringProp name="Header.value">2576965d-04b2-4797-b19e-d2cacf6f8fb2</stringProp>
+              </elementProp>
+              <elementProp name="" elementType="Header">
+                <stringProp name="Header.name">Cache-Control</stringProp>
+                <stringProp name="Header.value">no-cache</stringProp>
+              </elementProp>
+            </collectionProp>
+          </HeaderManager>
+          <hashTree/>
+          <RandomVariableConfig guiclass="TestBeanGUI" testclass="RandomVariableConfig" testname="MSISDNs Generator" enabled="true">
+            <stringProp name="maximumValue">9473999999</stringProp>
+            <stringProp name="minimumValue">9470000000</stringProp>
+            <stringProp name="outputFormat"></stringProp>
+            <boolProp name="perThread">false</boolProp>
+            <stringProp name="randomSeed"></stringProp>
+            <stringProp name="variableName">msisdn</stringProp>
+          </RandomVariableConfig>
+          <hashTree/>
+          <RandomVariableConfig guiclass="TestBeanGUI" testclass="RandomVariableConfig" testname="ClientCorrelator" enabled="true">
+            <stringProp name="maximumValue">9999999999</stringProp>
+            <stringProp name="minimumValue">1</stringProp>
+            <stringProp name="outputFormat"></stringProp>
+            <boolProp name="perThread">false</boolProp>
+            <stringProp name="randomSeed"></stringProp>
+            <stringProp name="variableName">clientCorrelator</stringProp>
+          </RandomVariableConfig>
+          <hashTree/>
+          <RandomVariableConfig guiclass="TestBeanGUI" testclass="RandomVariableConfig" testname="Shortcode" enabled="true">
+            <stringProp name="maximumValue">9999</stringProp>
+            <stringProp name="minimumValue">1000</stringProp>
+            <stringProp name="outputFormat"></stringProp>
+            <boolProp name="perThread">false</boolProp>
+            <stringProp name="randomSeed"></stringProp>
+            <stringProp name="variableName">shortcode</stringProp>
+          </RandomVariableConfig>
+          <hashTree/>
+        </hashTree>
+        <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="USSD" enabled="true">
+          <boolProp name="HTTPSampler.postBodyRaw">true</boolProp>
+          <elementProp name="HTTPsampler.Arguments" elementType="Arguments">
+            <collectionProp name="Arguments.arguments">
+              <elementProp name="" elementType="HTTPArgument">
+                <boolProp name="HTTPArgument.always_encode">false</boolProp>
+                <stringProp name="Argument.value">{  &#xd;
+   &quot;outboundUSSDMessageRequest&quot;:{  &#xd;
+ 	&quot;address&quot;:&quot;tel:+${msisdn}&quot;,&#xd;
+      &quot;shortCode&quot;:&quot;1234&quot;,&#xd;
+      &quot;keyword&quot;: &quot;123&quot;,&#xd;
+     &quot;outboundUSSDMessage&quot;:&quot;sms&quot;,&#xd;
+      &quot;clientCorrelator&quot;:&quot;${clientCorrelator}&quot;,&#xd;
+      &quot;responseRequest&quot;:{  &#xd;
+         &quot;notifyURL&quot;:&quot;http://35.237.228.192:9091/ussdmt/inbound&quot;,&#xd;
+         &quot;callbackData&quot;:&quot;some-data-useful-to-the-requester&quot;&#xd;
+      },&#xd;
+      &quot;ussdAction&quot;: &quot;mtinit&quot;&#xd;
+   }&#xd;
+}</stringProp>
+                <stringProp name="Argument.metadata">=</stringProp>
+              </elementProp>
+            </collectionProp>
+          </elementProp>
+          <stringProp name="HTTPSampler.domain">gateway.am.axp.com</stringProp>
+          <stringProp name="HTTPSampler.port"></stringProp>
+          <stringProp name="HTTPSampler.protocol">https</stringProp>
+          <stringProp name="HTTPSampler.contentEncoding"></stringProp>
+          <stringProp name="HTTPSampler.path">/ussd/v1/outbound/tel:+${msisdn}</stringProp>
+          <stringProp name="HTTPSampler.method">POST</stringProp>
+          <boolProp name="HTTPSampler.follow_redirects">true</boolProp>
+          <boolProp name="HTTPSampler.auto_redirects">false</boolProp>
+          <boolProp name="HTTPSampler.use_keepalive">true</boolProp>
+          <boolProp name="HTTPSampler.DO_MULTIPART_POST">false</boolProp>
+          <stringProp name="HTTPSampler.embedded_url_re"></stringProp>
+          <stringProp name="HTTPSampler.connect_timeout">10000</stringProp>
+          <stringProp name="HTTPSampler.response_timeout">60000</stringProp>
+        </HTTPSamplerProxy>
+        <hashTree>
+          <HeaderManager guiclass="HeaderPanel" testclass="HeaderManager" testname="Headers" enabled="true">
+            <collectionProp name="HeaderManager.headers">
+              <elementProp name="" elementType="Header">
+                <stringProp name="Header.name">Authorization</stringProp>
+                <stringProp name="Header.value">Bearer eyJ4NXQiOiJPVFE1WmpFelpqWTBNV0ZrWlRFek9XRXpaVEV4TW1ReVlUZGlOREl5WVRkall6WTJZakF3TlEiLCJraWQiOiJNRFZrWTJJMVl6RmtNamRqWVRrellqaGtORFE1T1Roa1ltWmlZamxrWWpSbU1tTXhZMkpqWW1RNE1qWTJNV1UwWWpFMk16TTFaVEV3TkRrM1pqVTVaUV9SUzI1NiIsImFsZyI6IlJTMjU2In0.eyJzdWIiOiJhZG1pbiIsImF1dCI6IkFQUExJQ0FUSU9OIiwiYXVkIjoiMkdMMGdDQ1FuMlJsTGlQaWc3cHZMNURCRXZzYSIsIm5iZiI6MTY4NDE2ODk5MSwiYXpwIjoiMkdMMGdDQ1FuMlJsTGlQaWc3cHZMNURCRXZzYSIsInNjb3BlIjoiYW1fYXBwbGljYXRpb25fc2NvcGUgZGVmYXVsdCIsImlzcyI6Imh0dHBzOlwvXC9rbS5heHAuY29tOjQ0M1wvb2F1dGgyXC90b2tlbiIsImV4cCI6MTAwMTY4NDE2ODk5MCwiaWF0IjoxNjg0MTY4OTkxLCJqdGkiOiI2YmQzMTc5Yy05ZTFhLTRhYjQtYTVlMy01ZDFlMDg3NGJhNjYifQ.Pyb98LsBT18c5bkObMOMCjdH2H5g9mlwfputr2FF4M7Os5r9eqIzDbZPr96uBXHaVGgZ07IxIjgB7sOfaD9iztGSXrk96hnKotzbesZA9BoByYt-9oHaAfwkhIdO1q5GiIxAJCFm1oh4T4wiw92jXCuz6F9CHQJuHDWSwcLNAar2obZBy6bueVjkfHMJpurtUBTBN-NAQ7Bbp7doEJ7cwfvcW24D0ZoSXI8A7taK16W8CvLp2jluwhz4K4qgJWODx8KkkLuN6Jeafqk9QlvpwkKGoV6uJSkiw6EQR7KGuslCk7EvCZIRYT4N-6BD6JL4X0RSuhVjjPXb_cNQUGnJwQ</stringProp>
+              </elementProp>
+              <elementProp name="" elementType="Header">
+                <stringProp name="Header.name">Content-Type</stringProp>
+                <stringProp name="Header.value">application/json</stringProp>
+              </elementProp>
+              <elementProp name="" elementType="Header">
+                <stringProp name="Header.name">Postman-Token</stringProp>
+                <stringProp name="Header.value">2576965d-04b2-4797-b19e-d2cacf6f8fb2</stringProp>
+              </elementProp>
+              <elementProp name="" elementType="Header">
+                <stringProp name="Header.name">Cache-Control</stringProp>
+                <stringProp name="Header.value">no-cache</stringProp>
+              </elementProp>
+            </collectionProp>
+          </HeaderManager>
+          <hashTree/>
+          <RandomVariableConfig guiclass="TestBeanGUI" testclass="RandomVariableConfig" testname="MSISDNs Generator" enabled="true">
+            <stringProp name="maximumValue">9473999999</stringProp>
+            <stringProp name="minimumValue">9470000000</stringProp>
+            <stringProp name="outputFormat"></stringProp>
+            <boolProp name="perThread">false</boolProp>
+            <stringProp name="randomSeed"></stringProp>
+            <stringProp name="variableName">msisdn</stringProp>
+          </RandomVariableConfig>
+          <hashTree/>
+          <RandomVariableConfig guiclass="TestBeanGUI" testclass="RandomVariableConfig" testname="ClientCorrelator" enabled="true">
+            <stringProp name="maximumValue">9999999999</stringProp>
+            <stringProp name="minimumValue">1</stringProp>
+            <stringProp name="outputFormat"></stringProp>
+            <boolProp name="perThread">false</boolProp>
+            <stringProp name="randomSeed"></stringProp>
+            <stringProp name="variableName">clientCorrelator</stringProp>
+          </RandomVariableConfig>
+          <hashTree/>
+        </hashTree>
+        <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="Location" enabled="true">
+          <elementProp name="HTTPsampler.Arguments" elementType="Arguments" guiclass="HTTPArgumentsPanel" testclass="Arguments" testname="User Defined Variables" enabled="true">
+            <collectionProp name="Arguments.arguments"/>
+          </elementProp>
+          <stringProp name="HTTPSampler.domain">gateway.am.axp.com</stringProp>
+          <stringProp name="HTTPSampler.port"></stringProp>
+          <stringProp name="HTTPSampler.protocol">https</stringProp>
+          <stringProp name="HTTPSampler.contentEncoding"></stringProp>
+          <stringProp name="HTTPSampler.path">/location/v1/queries/location?address=tel:+${msisdn}&amp;requestedAccuracy=1000</stringProp>
+          <stringProp name="HTTPSampler.method">GET</stringProp>
+          <boolProp name="HTTPSampler.follow_redirects">true</boolProp>
+          <boolProp name="HTTPSampler.auto_redirects">false</boolProp>
+          <boolProp name="HTTPSampler.use_keepalive">true</boolProp>
+          <boolProp name="HTTPSampler.DO_MULTIPART_POST">false</boolProp>
+          <stringProp name="HTTPSampler.embedded_url_re"></stringProp>
+          <stringProp name="HTTPSampler.connect_timeout">10000</stringProp>
+          <stringProp name="HTTPSampler.response_timeout">60000</stringProp>
+        </HTTPSamplerProxy>
+        <hashTree>
+          <HeaderManager guiclass="HeaderPanel" testclass="HeaderManager" testname="Headers" enabled="true">
+            <collectionProp name="HeaderManager.headers">
+              <elementProp name="" elementType="Header">
+                <stringProp name="Header.name">Authorization</stringProp>
+                <stringProp name="Header.value">Bearer eyJ4NXQiOiJPVFE1WmpFelpqWTBNV0ZrWlRFek9XRXpaVEV4TW1ReVlUZGlOREl5WVRkall6WTJZakF3TlEiLCJraWQiOiJNRFZrWTJJMVl6RmtNamRqWVRrellqaGtORFE1T1Roa1ltWmlZamxrWWpSbU1tTXhZMkpqWW1RNE1qWTJNV1UwWWpFMk16TTFaVEV3TkRrM1pqVTVaUV9SUzI1NiIsImFsZyI6IlJTMjU2In0.eyJzdWIiOiJhZG1pbiIsImF1dCI6IkFQUExJQ0FUSU9OIiwiYXVkIjoiMkdMMGdDQ1FuMlJsTGlQaWc3cHZMNURCRXZzYSIsIm5iZiI6MTY4NDE2ODk5MSwiYXpwIjoiMkdMMGdDQ1FuMlJsTGlQaWc3cHZMNURCRXZzYSIsInNjb3BlIjoiYW1fYXBwbGljYXRpb25fc2NvcGUgZGVmYXVsdCIsImlzcyI6Imh0dHBzOlwvXC9rbS5heHAuY29tOjQ0M1wvb2F1dGgyXC90b2tlbiIsImV4cCI6MTAwMTY4NDE2ODk5MCwiaWF0IjoxNjg0MTY4OTkxLCJqdGkiOiI2YmQzMTc5Yy05ZTFhLTRhYjQtYTVlMy01ZDFlMDg3NGJhNjYifQ.Pyb98LsBT18c5bkObMOMCjdH2H5g9mlwfputr2FF4M7Os5r9eqIzDbZPr96uBXHaVGgZ07IxIjgB7sOfaD9iztGSXrk96hnKotzbesZA9BoByYt-9oHaAfwkhIdO1q5GiIxAJCFm1oh4T4wiw92jXCuz6F9CHQJuHDWSwcLNAar2obZBy6bueVjkfHMJpurtUBTBN-NAQ7Bbp7doEJ7cwfvcW24D0ZoSXI8A7taK16W8CvLp2jluwhz4K4qgJWODx8KkkLuN6Jeafqk9QlvpwkKGoV6uJSkiw6EQR7KGuslCk7EvCZIRYT4N-6BD6JL4X0RSuhVjjPXb_cNQUGnJwQ</stringProp>
+              </elementProp>
+              <elementProp name="" elementType="Header">
+                <stringProp name="Header.name">Content-Type</stringProp>
+                <stringProp name="Header.value">application/json</stringProp>
+              </elementProp>
+              <elementProp name="" elementType="Header">
+                <stringProp name="Header.name">Postman-Token</stringProp>
+                <stringProp name="Header.value">2576965d-04b2-4797-b19e-d2cacf6f8fb2</stringProp>
+              </elementProp>
+              <elementProp name="" elementType="Header">
+                <stringProp name="Header.name">Cache-Control</stringProp>
+                <stringProp name="Header.value">no-cache</stringProp>
+              </elementProp>
+            </collectionProp>
+          </HeaderManager>
+          <hashTree/>
+          <RandomVariableConfig guiclass="TestBeanGUI" testclass="RandomVariableConfig" testname="MSISDNs Generator" enabled="true">
+            <stringProp name="maximumValue">9473999999</stringProp>
+            <stringProp name="minimumValue">9470000000</stringProp>
+            <stringProp name="outputFormat"></stringProp>
+            <boolProp name="perThread">false</boolProp>
+            <stringProp name="randomSeed"></stringProp>
+            <stringProp name="variableName">msisdn</stringProp>
+          </RandomVariableConfig>
+          <hashTree/>
+          <RandomVariableConfig guiclass="TestBeanGUI" testclass="RandomVariableConfig" testname="RequestedAccuracy" enabled="true">
+            <stringProp name="maximumValue">999999</stringProp>
+            <stringProp name="minimumValue">1000</stringProp>
+            <stringProp name="outputFormat"></stringProp>
+            <boolProp name="perThread">false</boolProp>
+            <stringProp name="randomSeed"></stringProp>
+            <stringProp name="variableName">requestedAccuracy</stringProp>
+          </RandomVariableConfig>
+          <hashTree/>
+        </hashTree>
+        <ResultCollector guiclass="ViewResultsFullVisualizer" testclass="ResultCollector" testname="result tree" enabled="true">
+          <boolProp name="ResultCollector.error_logging">false</boolProp>
+          <objProp>
+            <name>saveConfig</name>
+            <value class="SampleSaveConfiguration">
+              <time>true</time>
+              <latency>true</latency>
+              <timestamp>true</timestamp>
+              <success>true</success>
+              <label>true</label>
+              <code>true</code>
+              <message>true</message>
+              <threadName>true</threadName>
+              <dataType>true</dataType>
+              <encoding>false</encoding>
+              <assertions>true</assertions>
+              <subresults>true</subresults>
+              <responseData>false</responseData>
+              <samplerData>false</samplerData>
+              <xml>false</xml>
+              <fieldNames>false</fieldNames>
+              <responseHeaders>true</responseHeaders>
+              <requestHeaders>false</requestHeaders>
+              <responseDataOnError>false</responseDataOnError>
+              <saveAssertionResultsFailureMessage>false</saveAssertionResultsFailureMessage>
+              <assertionsResultsToSave>0</assertionsResultsToSave>
+              <bytes>true</bytes>
+              <threadCounts>true</threadCounts>
+            </value>
+          </objProp>
+          <stringProp name="filename"></stringProp>
+          <stringProp name="TestPlan.comments">ce1e9fcb-cc5c-3747-ac78-c68d31da4f0f</stringProp>
+        </ResultCollector>
+        <hashTree/>
+        <ResultCollector guiclass="SummaryReport" testclass="ResultCollector" testname="Summary Report" enabled="true">
+          <boolProp name="ResultCollector.error_logging">false</boolProp>
+          <objProp>
+            <name>saveConfig</name>
+            <value class="SampleSaveConfiguration">
+              <time>true</time>
+              <latency>true</latency>
+              <timestamp>true</timestamp>
+              <success>true</success>
+              <label>true</label>
+              <code>true</code>
+              <message>true</message>
+              <threadName>true</threadName>
+              <dataType>true</dataType>
+              <encoding>false</encoding>
+              <assertions>true</assertions>
+              <subresults>true</subresults>
+              <responseData>false</responseData>
+              <samplerData>false</samplerData>
+              <xml>false</xml>
+              <fieldNames>true</fieldNames>
+              <responseHeaders>true</responseHeaders>
+              <requestHeaders>true</requestHeaders>
+              <responseDataOnError>false</responseDataOnError>
+              <saveAssertionResultsFailureMessage>true</saveAssertionResultsFailureMessage>
+              <assertionsResultsToSave>0</assertionsResultsToSave>
+              <bytes>true</bytes>
+              <threadCounts>true</threadCounts>
+              <idleTime>true</idleTime>
+            </value>
+          </objProp>
+          <stringProp name="filename"></stringProp>
+        </ResultCollector>
+        <hashTree/>
+      </hashTree>
+    </hashTree>
+  </hashTree>
+</jmeterTestPlan>
+
